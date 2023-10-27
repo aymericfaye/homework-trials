@@ -9,7 +9,7 @@ const port = 8080;
 // Init application
 const config = loadConfig()
 const trialsService = new TrialsService(config.trials)
-const trialsController = new TrialsController(trialsService)
+const trialsController = new TrialsController(trialsService, config.countries)
 
 app.get("/ping", (_req, res: Response) => {
   res.send("pong");

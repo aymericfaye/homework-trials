@@ -1,5 +1,6 @@
 import { Request, Response } from "express"
 import moment from "moment"
+import { Country } from "./Config"
 import { TrialsService } from "./TrialsService"
 
 type OnGoingReqQuery = {
@@ -9,9 +10,11 @@ type OnGoingReqQuery = {
 
 export class TrialsController {
   trialsService: TrialsService
+  countries: Country[]
 
-  constructor(trialsService: TrialsService) {
+  constructor(trialsService: TrialsService, countries: Country[]) {
     this.trialsService = trialsService
+    this.countries = countries
   }
   
   onGoing = (req: Request<{}, {}, {}, OnGoingReqQuery>, res: Response) => {
@@ -23,7 +26,8 @@ export class TrialsController {
           name: t.name,
           start_date: (moment(t.startDate)).format("YYYY-MM-DD"),
           end_date: (moment(t.endDate)).format("YYYY-MM-DD"),
-          sponsor: t.sponsor,
+          country: country && this.countries.find(c => c.code == t.countryCode)?.name,
+          sponsor: sponsor && t.sponsor,
         }
       }
     )
