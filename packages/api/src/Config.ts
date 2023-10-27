@@ -1,6 +1,6 @@
-import rawCountries from "../../../data/countries.json"
-import rawSponsors from "../../../data/sponsors.json"
-import rawTrials from "../../../data/trials.json"
+import rawCountries from "../data/countries.json"
+import rawSponsors from "../data/sponsors.json"
+import rawTrials from "../data/trials.json"
 
 export type CountryCode = string
 

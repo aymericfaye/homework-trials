@@ -22,10 +22,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "cli",\
         "reference": "workspace:packages/cli"\
-      },\
-      {\
-        "name": "trials",\
-        "reference": "workspace:packages/trials"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -33,8 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [\
       ["api", ["workspace:packages/api"]],\
       ["cli", ["workspace:packages/cli"]],\
-      ["senior-take-home-test", ["workspace:."]],\
-      ["trials", ["workspace:packages/trials"]]\
+      ["senior-take-home-test", ["workspace:."]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -963,18 +958,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["toidentifier", "npm:1.0.1"]\
           ],\
           "linkType": "HARD"\
-        }]\
-      ]],\
-      ["trials", [\
-        ["workspace:packages/trials", {\
-          "packageLocation": "./packages/trials/",\
-          "packageDependencies": [\
-            ["trials", "workspace:packages/trials"],\
-            ["@types/node", "npm:20.4.5"],\
-            ["ts-node", "virtual:b35e543feb7d9313e439035ee1f8fc4f39fc5cea9e6f58074f7ab77af6b589006c935e647c030ab32b013753ef64964d1e366d80b46ee7d03aa5fc23397c8718#npm:10.9.1"],\
-            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
-          ],\
-          "linkType": "SOFT"\
         }]\
       ]],\
       ["ts-node", [\

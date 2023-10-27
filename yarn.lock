@@ -774,16 +774,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"trials@workspace:packages/trials":
-  version: 0.0.0-use.local
-  resolution: "trials@workspace:packages/trials"
-  dependencies:
-    "@types/node": ^20.4.5
-    ts-node: ^10.9.1
-    typescript: ^5.1.6
-  languageName: unknown
-  linkType: soft
-
 "ts-node@npm:^10.9.1":
   version: 10.9.1
   resolution: "ts-node@npm:10.9.1"

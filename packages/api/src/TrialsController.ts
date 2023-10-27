@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import moment from "moment"
-import { TrialsService } from "../../trials/src/TrialsService"
+import { TrialsService } from "./TrialsService"
 
 type OnGoingReqQuery = {
   country?: string;
@@ -14,7 +14,7 @@ export class TrialsController {
     this.trialsService = trialsService
   }
   
-  onGoing(req: Request<{}, {}, {}, OnGoingReqQuery>, res: Response) {
+  onGoing = (req: Request<{}, {}, {}, OnGoingReqQuery>, res: Response) => {
     const { country, sponsor } = req.query
     const now = new Date(Date.now())
     const result = this.trialsService.find(country, sponsor, now).map(

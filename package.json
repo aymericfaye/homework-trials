@@ -10,7 +10,6 @@
   },
   "scripts": {
     "api": "yarn workspace api",
-    "cli": "yarn workspace cli",
-    "trials": "yarn workspace trials"
+    "cli": "yarn workspace cli"
   }
 }

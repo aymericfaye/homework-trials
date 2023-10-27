@@ -10,9 +10,6 @@
     },
     {
       "path": "./packages/cli"
-    },
-    {
-      "path": "./packages/trials"
     }
   ]
 }

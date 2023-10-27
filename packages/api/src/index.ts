@@ -1,7 +1,7 @@
 import express, { Express, Response } from "express"
-import { loadConfig } from "../../trials/src/Config"
-import { TrialsService } from "../../trials/src/TrialsService"
-import { TrialsController } from "./TrialsController";
+import { loadConfig } from "./Config"
+import { TrialsService } from "./TrialsService"
+import { TrialsController } from "./TrialsController"
 
 const app: Express = express();
 const port = 8080;
