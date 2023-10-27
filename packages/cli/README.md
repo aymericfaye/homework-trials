@@ -2,9 +2,9 @@
 
 This package is the beginning of a CLI built using [commander.js](https://github.com/tj/commander.js).
 
+Fetch ongoing trials from http://localhost:8080.
+
 You can run it using the following command:
 ```sh
-yarn start
+yarn start -h
 ```
-
-If your API server is running and available on port 8080, it will display "pong".
