@@ -5,10 +5,12 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@types/node": "^20.8.9",
     "typescript": "^5.1.6"
   },
   "scripts": {
     "api": "yarn workspace api",
-    "cli": "yarn workspace cli"
+    "cli": "yarn workspace cli",
+    "trials": "yarn workspace trials"
   }
 }

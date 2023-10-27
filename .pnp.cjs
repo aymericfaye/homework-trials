@@ -22,6 +22,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "cli",\
         "reference": "workspace:packages/cli"\
+      },\
+      {\
+        "name": "trials",\
+        "reference": "workspace:packages/trials"\
       }\
     ],\
     "enableTopLevelFallback": true,\
@@ -29,7 +33,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "fallbackExclusionList": [\
       ["api", ["workspace:packages/api"]],\
       ["cli", ["workspace:packages/cli"]],\
-      ["senior-take-home-test", ["workspace:."]]\
+      ["senior-take-home-test", ["workspace:."]],\
+      ["trials", ["workspace:packages/trials"]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -38,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@types/node", "npm:20.8.9"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "linkType": "SOFT"\
@@ -202,6 +208,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-20.4.5-7555fad0d4-36a0304a8d.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:20.4.5"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:20.8.9", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.8.9-9c9903a005-0c05f3502a.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:20.8.9"],\
+            ["undici-types", "npm:5.26.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -883,6 +897,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["senior-take-home-test", "workspace:."],\
+            ["@types/node", "npm:20.8.9"],\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "linkType": "SOFT"\
@@ -938,6 +953,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["toidentifier", "npm:1.0.1"]\
           ],\
           "linkType": "HARD"\
+        }]\
+      ]],\
+      ["trials", [\
+        ["workspace:packages/trials", {\
+          "packageLocation": "./packages/trials/",\
+          "packageDependencies": [\
+            ["trials", "workspace:packages/trials"],\
+            ["@types/node", "npm:20.4.5"],\
+            ["ts-node", "virtual:b35e543feb7d9313e439035ee1f8fc4f39fc5cea9e6f58074f7ab77af6b589006c935e647c030ab32b013753ef64964d1e366d80b46ee7d03aa5fc23397c8718#npm:10.9.1"],\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
+          ],\
+          "linkType": "SOFT"\
         }]\
       ]],\
       ["ts-node", [\
@@ -1037,6 +1064,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/typescript-patch-bd21d74a9d-f53bfe97f7.zip/node_modules/typescript/",\
           "packageDependencies": [\
             ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["undici-types", [\
+        ["npm:5.26.5", {\
+          "packageLocation": "./.yarn/cache/undici-types-npm-5.26.5-de4f7c7bb9-3192ef6f3f.zip/node_modules/undici-types/",\
+          "packageDependencies": [\
+            ["undici-types", "npm:5.26.5"]\
           ],\
           "linkType": "HARD"\
         }]\
