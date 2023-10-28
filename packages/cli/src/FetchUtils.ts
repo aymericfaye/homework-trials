@@ -11,6 +11,7 @@ function formatQueryParams(qp?: QueryParam[]): string {
   }
 }
 
+// Typed wrapper to better integrate fetch
 export async function fetchJsonAs<T>(url: string, qp?: QueryParam[]): Promise<T> {
   const response = await fetch(url + formatQueryParams(qp))
   return await response.json()

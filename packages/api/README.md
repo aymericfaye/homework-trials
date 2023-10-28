@@ -6,3 +6,8 @@ You can run it using the following command:
 ```sh
 yarn start
 ```
+
+Run unit tests:
+```sh
+yarn test
+```

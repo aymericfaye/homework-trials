@@ -83,3 +83,15 @@ In order to setup and run the existing basic project we provided:
 - install node (see .nvmrc)
 - install and run yarn
 - see the documentation in packages/api and packages/cli
+
+# Result
+
+Applications should be feature complete. See the packages documentations for instructions.
+
+I didn't manage to configure a test library, so I just added a few unit tests by hand in the api package.
+
+## Notes regarding the exercise
+
+I return sponsor or country name only when they are passed as search parameters. Both for API and CLI. It's the only way I found to be compliant with the expected results. From an API design perspective this seems counter-intuitive and I would prefer to always return the complete data or define specific filter parameters.
+
+Implementation is rather barebone, since I spent most of my time learning the tooling and the libraries, as I don't have prior experience with them.

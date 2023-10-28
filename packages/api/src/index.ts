@@ -7,7 +7,9 @@ const app: Express = express();
 const port = 8080;
 
 // Init application
+// We manage all the data as static configuration files loaded in the Config object
 const config = loadConfig()
+// Standard service / controller pattern to structure the API
 const trialsService = new TrialsService(config.trials)
 const trialsController = new TrialsController(trialsService, config.countries)
 

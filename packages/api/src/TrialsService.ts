@@ -7,6 +7,8 @@ export class TrialsService {
     this.trials = trials
   }
 
+  // Main function to perform the search
+  // TODO: Limit the search result in case of a large dataset
   find(countryCode?: CountryCode, sponsor?: Sponsor, date?: Date): Array<Trial> {
     return this.trials.filter(
       t => {

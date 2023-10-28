@@ -52,7 +52,7 @@ export function loadConfig(): Config {
     })
   )
 
-  // Validate trials
+  // Basic data validation on trials
   trials.forEach(
     t => {
       if (!countries.find(c => c.code == t.countryCode)) {
